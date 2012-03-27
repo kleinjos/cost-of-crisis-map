@@ -2,7 +2,7 @@ var map, interactivity, layer;
 
 var url = 'http://api.tiles.mapbox.com/v3/';
 var baselayer = "occupy.wht-us-base";
-var activelayer = "occupy.4q11-delinq";
+var activelayer = "occupy.4q99-delinq";
 
 wax.tilejson(url + baselayer + ',' + activelayer + ',occupy.state-lines' + '.jsonp', function(tilejson) {
   map = new L.Map('map')
