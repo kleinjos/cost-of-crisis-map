@@ -4,39 +4,52 @@
 @blue1:#2f040a;
 @yellow:#30a9cf;
 @white:#ffffff;
+
 #map {
   width:100%;
-  height:90%;
+  height:100%;
   position:absolute;
-  background-color:darken(@background,20%);
+  background-color:rgba(0,0,0,0.75);
   bottom:0;
   left:0;
 }
 
 #sidebar {
-	position:absolute;
-	width:20%;
-	top:70%:
-	left:80%;
-	bottom:0px;
+    position:absolute;
+    width:20%;
+    top:70%:
+    left:80%;
+    bottom:0px;
+}
+#leftsidebar {
+    position:absolute;
+    width:20%;
 }
 
-#title {
-	width:100%;
-	position:absolute;
-	height:10%;
-	top:0px;
-	right:0px;
-	background-color:rgba(0,0,0,0.75);
-	font-family: 'Asap', sans-serif;
-	font-weight:normal;
-	color:#fea;
-	z-index:999999;
+.title {
+    width:100%;
+    position:absolute;
+    height:10%;
+    top:0px;
+    right:0px;
+    background-color:rgba(0,0,0,0.75);
 }
-#title p{
-	margin-left:auto;
-	margin-right:auto;
-	font-size:18;
+
+.inner {
+	position:absolute;
+	bottom:20%;
+    font-family: 'PolyRegular' , sans-serif;
+	text-transform:;
+    font-weight:normal;
+    font-size:26pt;
+    color:#ffFfff;
+	left:0px;
+	right:0px;
+    z-index:999998;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;	
+	
 }
 
 .about {
@@ -45,42 +58,40 @@
   bottom:0;
   top:70%;
   padding:0px;
-  font-size:16;
+  font-size:14;
   bottom:0;
   right:0;
   color:#fea;
   background-color:rgba(0,0,0,0.75);
-font-family: 'Asap', sans-serif;
+  font-family: 'PolyItalic' , sans-serif;
   font-weight:normal;
 }
 
-#explanation {
-	width:80%;
-    position:absolute;
-    bottom:0;
-    top:80%;
-    right:10%;
-    left:10%;
-	text-align:left;
+div.description {
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
 }
-div.explanation {
-	margin-top:20px;
-	width:90%;
-	margin-left:5%;
-	margin-right:5%;
-}
+
 .source {
-	font-size:12pt;
+    font-size:12pt;
 }
+
 .source:hover a{
-	color:blue;
+    color:blue;
 }
-.about h1 {
-font-family: 'Asap', sans-serif;
-  font-size:18px;
+
+.about p {
+  font-family: 'PolyRegular', sans-serif;
+  font-size:14px;
   font-weight:normal;
   line-height:normal;
 }
+
+#italic {
+	font-family:'PolyItalic', sans-serif;
+}
+
 /*hid the links replaced by the js slider */
 
 ul.layers li {
@@ -91,7 +102,7 @@ ul.layers li {
 
 ul.layers li a {
   color:#fea;
-font-family: 'Asap', sans-serif;
+  font-family: 'Asap', sans-serif;
   font-size:0px;
   line-height:normal;
   text-decoration:none;
@@ -102,60 +113,64 @@ font-family: 'Asap', sans-serif;
 ul.layers li a.active {
   color:#74b6e6;
 }
+
 #sliderbody {
-	width:650px;
-	height:150px;
-	background-color:#ffcc00;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0px;
+    width:650px;
+    height:150px;
+    background-color:transparent;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
 }
+
 /* absolutely positioned the slider beneath the map*/
 #slider {
-	width: 650px;
-	position: absolute;
-	bottom: 30%;
-	left: auto;
-	right: auto;
-	padding:0px;
+    width: 650px;
+    position: absolute;
+    bottom: 30%;
+    left: auto;
+    right: auto;
+    padding:0px;
 }
+
 /*added year markers for slider  */
 ul.slideryears {
-	width:650px;
-	position: absolute;
-	bottom: 12%;
-	padding:0px;
+    width:650px;
+    position: absolute;
+    bottom: 12%;
+    padding:0px;
 }
+
 ul.slideryears  li {
-	display:inline;
-	list-style-type:none;
-	color:#fea;
-	font-family: 'Karla', sans-serif;
-	font-size:14px;
-	line-height:normal;
-	text-decoration:none;
-	margin-left:59px;
-	margin-right:59px;
+    display:inline;
+    list-style-type:none;
+    color:#fea;
+    font-family: 'PolyRegular', sans-serif;
+    font-size:14px;
+    line-height:normal;
+    text-decoration:none;
+    margin-left:58px;
+    margin-right:58px;
 }
+
 #first {
-	margin-left:0px;
+    margin-left:0px;
 }
 
 #last {
-	margin-right:0px;
+    margin-right:0px;
 }
 
-
 .wax-tooltip {
-  font-family: 'Karla', sans-serif;
+  font-family: 'PolyItalic' , sans-serif;
   z-index:999999;
   position:absolute;
-  background:#333;
+  background:#b81900;
   color:#fff;
   padding:10px;
   -webkit-user-select:auto;
   right:10px;
-  top:10px;
+  top:80px;
   max-width:300px;
   opacity:1;
   -webkit-transition:opacity 150ms;
@@ -163,3 +178,4 @@ ul.slideryears  li {
   }
 
 .wax-fade { opacity:0; }
+​

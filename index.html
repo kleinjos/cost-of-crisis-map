@@ -3,8 +3,7 @@
   <head>
     <meta charset=utf-8 />
     <title>Cost of the Crisis</title>
-    <link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
-	<link href='http://fonts.googleapis.com/css?family=Asap:400,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/webfontkit/stylesheet.css" type="text/css" charset="utf-8" />
 	<link rel='stylesheet' href='css/reset.css' type='text/css' />
     <link rel='stylesheet' href='css/style.css' type='text/css' />
     <link rel="stylesheet" href="js/leaflet.css" />
@@ -16,16 +15,14 @@
 
     <div id='map'>
     </div>
-	<div id="title">The Human Cost of the Global Financial Crisis</div>
-	<div id="sidebar"><h1><strong>About</strong><b>
-	This visualization shows the percentage of people who have been unable to make a payment on their mortgage loans for 90 or more days. These people are at risk of foreclosure if they miss one more payment. <br>
-	<strong>Notes </strong><b>
-	These statistics comes from the Federal Reserve Bank of New York Consumer Credit Panel, which provided a 5% random sample of U.S. individuals who have credit reports with Equifax.<b>
-	The mortgage debt represented includes first mortgages, home equity loans and home equity lines of credit.<b>
-	Only counties with a population of at least 10,000 people with credit reports in 2010Q4 were included in these statistics.</h1>
-	</div>
+	<div class="title"><div class="inner">The Human Cost of the Global Financial Crisis</div></div>
     <div class="about">
-	<div class="explanation">
+	<div class="description"><p>
+	This visualization shows the percentage of people who have been unable to make a payment on their mortgage loans for 90 or more days. These people are at risk of foreclosure if they miss one more payment. <br>
+	<span id="italic">These statistics comes from the Federal Reserve Bank of New York Consumer Credit Panel, which provided a 5% random sample of U.S. individuals who have credit reports with Equifax.<br>
+	The mortgage debt represented includes first mortgages, home equity loans and home equity lines of credit.<br>
+	Only counties with a population of at least 10,000 people with credit reports in 2010Q4 were included in these statistics.</span></p>
+	</div>
 		<ul class="layers">
         <li><a class="active" data-layer="occupy.4q11-delinq" href="#">2011</a></li>
         <li><a data-layer="occupy.4q10-delinq" href="#">2010</a></li>
@@ -41,7 +38,6 @@
 	    <li><a data-layer="occupy.4q00-delinq" href="#">2000</a></li>
 	    <li><a data-layer="occupy.4q99-delinq" href="#">1999</a></li>
       </ul>
-    </div>
 	<div id="sliderbody">
 	<div id="slider"></div>
 	<div class="slideryears">
@@ -59,8 +55,7 @@
 <!--		<li class="year">2009</li>
 			<li class="year">2010</li> -->
 			<li class="year" id="last">2011</li>
-		</ul>	
-	</div>
+		</ul>
 	</div>
 	</div>
 
