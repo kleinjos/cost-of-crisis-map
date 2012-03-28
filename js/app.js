@@ -1,68 +1,68 @@
-var map;
+var map, interactivity, layer;
 
 var url = 'http://api.tiles.mapbox.com/v3/';
-var baselayer = "occupy.background"
+var baselayer = "occupy.wht-us-base"
 var activelayer = "occupy.4q11-delinq";
+var statelayer = "occupy.state-lines";
 
-// Define a custom icon using the Maki museum icon
-var museumIcon = L.Icon.extend({
-  iconUrl: 'img/museum-24.png',
-  shadowUrl: null,
-  iconSize: new L.Point(24, 24),
-  shadowSize: null,
-  iconAnchor: new L.Point(12, 24),
-  popupAnchor: new L.Point(0,-24)
-});
-
-var geojsonLayer = new L.GeoJSON(data, {
-  pointToLayer: function (latlng) {
-    return new L.Marker(latlng, {
-      icon: new museumIcon()
-    });
-  }
-});
-
-wax.tilejson(url + baselayer + ',' + activelayer + '.jsonp', function(tilejson) {
+wax.tilejson(url + baselayer + ',' + activelayer + ',' + statelayer + '.jsonp', function(tilejson) {
   map = new L.Map('map')
-  .setView(new L.LatLng(39, -78), 4)
-  .addLayer(new wax.leaf.connector(tilejson))
-  .addLayer(geojsonLayer);
+    .setView(new L.LatLng(39, -78), 4);
 
   tilejson.minzoom = 2;
   tilejson.maxzoom = 7;
 
-  geojsonLayer.on('featureparse', function (e) {
-    if (e.properties && e.properties.name){
-      e.layer.bindPopup(e.properties.name);
-    }
-  });
+  layer = new wax.leaf.connector(tilejson);
+  map.addLayer(layer);
 
-  geojsonLayer.addGeoJSON(data);
+  interactivity = wax.leaf.interaction()
+    .map(map)
+    .tilejson(tilejson)
+    .on(wax.tooltip().animate(true).parent(map._container).events());
 });
 
 function refreshMap(layers) {
-  wax.tilejson('http://api.tiles.mapbox.com/v3/' + layers + '.jsonp', function (tilejson) {
-    map.addLayer(new wax.leaf.connector(tilejson));
-
+  wax.tilejson(url + layers + '.jsonp', function(tilejson) {
     tilejson.minzoom = 2;
     tilejson.maxzoom = 7;
+
+    // This little dance to try to avoid a flash,
+    // but Leaflet seems to flash anyway
+    var newlayer = new wax.leaf.connector(tilejson);
+    map.addLayer(newlayer);
+    map.removeLayer(layer);
+    layer = newlayer;
+
+    interactivity.tilejson(tilejson);
   });
 }
 
 $(document).ready(function () {
 
-  $('sidebar ul.layers li a').click(function (e) {
-    e.preventDefault();
-    if (!$(this).hasClass('active')) {
-      $('ul.layers li a').removeClass('active');
-      $(this).addClass('active');
-      var activeLayer = $(this).attr('data-layer');
-      layers = [
-        baselayer,
-        activeLayer
-      ];
-      refreshMap(layers);
-    }
+  // Create a new UI Slider. Requires jQuery version 1.8
+  // http://docs.jquery.com/UI/API/1.8/Slider
+  $('#slider').slider({
+    animate: 'normal',
+    min: 1999,
+    max: 2011,
+    value: 2011
   });
 
+  // Initialize slider handle year
+  $('a.ui-slider-handle').html('2011');
+
+  // refresh the map every time the slider changes
+  $('#slider').bind('slidechange', function(event, ui) {
+  	// occupy.4q11-delinq
+    var year = $('#slider').slider('value').toString()
+    var value = year.substring(2,4);
+  	var activeLayer = "occupy.4q" + value + "-delinq";
+    var layers = [
+      baselayer,
+      activeLayer,
+      statelayer
+    ];
+    $('a.ui-slider-handle').html(year);
+  	refreshMap(layers);
+  });
 });
