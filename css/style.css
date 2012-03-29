@@ -7,12 +7,9 @@
 	width:100%;
 	height:100%;
 	position:absolute;
-	background-color:rgba(95,93,93,0.25);
+	background-color:rgba(0,0,0,0.75);
 	bottom:0;
 	left:0;
-}
-.title {
-	background-color:#000000;
 }
 
 h1.title {
@@ -21,13 +18,12 @@ h1.title {
   position:absolute;
   top:0;
   right:0;
-  background-color:rgba(15,111,164,.75);
+  background-color:rgba(0,0,0,0.75);
   color:#fff;
-	font-family:'Old Standard TT', sans-serif;
+	font-family:PolyRegular, sans-serif;
 	font-size:26pt;
 	font-weight:normal;
   text-align:center;
-  text-transform:uppercase;
 }
 
 .about {
@@ -36,10 +32,10 @@ h1.title {
   position:absolute;
   bottom:0;
   right:0;
-  color:#fff;
-  background-color:rgba(15,111,164,.75);
-  font-family:'Old Standard TT', sans-serif;
-  font-size:16px;
+  color:#fea;
+  background-color:rgba(0,0,0,0.75);
+	font-family:PolyRegular, sans-serif;
+	font-size:16px;
   font-weight:normal;
 }
 
@@ -48,7 +44,7 @@ h1.title {
 }
 
 .about cite p {
-  font-family:'Old Standard TT', sans-serif;
+	font-family:PolyItalic, sans-serif;
 }
 
 .sliderContainer {
@@ -60,7 +56,7 @@ h1.title {
 .ui-widget-content .ui-state-hover,
 .ui-widget-content .ui-state-focus {
 	background:#B81900;
-    border:1px solid #ff0000;
+  border:1px solid #ff0000;
 }
 
 .ui-slider .ui-slider-handle {
@@ -73,7 +69,7 @@ h1.title {
 }
 
 .wax-tooltip {
-	max-width:200px;
+	max-width:300px;
 	padding:10px;
 	position:absolute;
 	top:80px;
@@ -89,10 +85,9 @@ h1.title {
 	background-position-y:initial;
 	background-origin:initial;
 	background-clip:initial;
-	background-color:rgba(15,111,164,.75);
+	background-color:#B81900;
 	color:#FFFFFF;
-	font-family:'Old Standard TT', sans-serif;
-	font-style:'italic';
+	font-family:PolyItalic, sans-serif;
 	-webkit-user-select:auto;
 	opacity:1;
 	-webkit-transition-property:opacity;
