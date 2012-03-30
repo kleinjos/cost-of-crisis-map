@@ -4,52 +4,70 @@
 }
 
 #map {
-	width:100%;
-	height:100%;
-	position:absolute;
-	background-color:rgba(15, 111, 164,0.15);
-	bottom:0;
-	left:0;
+  width:100%;
+  height:100%;
+  position:absolute;
+  background-color:rgba(95,93,93,0.25);
+  bottom:0;
+  left:0;
+  z-index:9990;
 }
 
 h1.title {
-  width:100%;
-  padding:20px 0;
-  position:absolute;
-  top:0;
-  right:0;
-  background-color:rgba(15, 111, 164,0.75);
-  color:#fff;
-	font-family:PolyRegular, sans-serif;
-	font-size:26pt;
-	font-weight:normal;
-  text-align:center;
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(15, 111, 164, .75);
+  color: white;
+  font-family: 'Old Standard TT', sans-serif;
+  font-size: 26pt;
+  font-weight: normal;
+  text-align: center;
+  z-index:999999;
+  text-transform: uppercase;
+}
+
+#contact {
+  font-size: 10pt;
+  text-align: center;
+  color: white;
+  text-transform: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .about {
-  width:100%;
-  padding:20px 0;
-  position:absolute;
-  bottom:0;
-  right:0;
-  color:#fea;
-  background-color:rgba(15, 111, 164,0.75);
-	font-family:PolyRegular, sans-serif;
-	font-size:16px;
-  font-weight:normal;
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(15, 111, 164, .75);
+  font-family: 'Old Standard TT', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  z-index:99999;
 }
 
 .about p {
   margin-bottom:10px;
+  font-size:11pt;
 }
 
 .about cite p {
-	font-family:PolyItalic, sans-serif;
+  font-family:'Old Standard TT', sans-serif;
+  font-size:10pt;
 }
 
 .sliderContainer {
-	width:960px;
-  margin:40px auto;
+  width: 960px;
+  margin: 20px auto;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  z-index:99999;
 }
 
 .ui-widget-content .ui-state-default,
@@ -66,6 +84,12 @@ h1.title {
 	color:#FFFFFF;
   font-size:14px;
   text-decoration:none;
+  z-index:99999;
+}
+
+#license {
+  font-size: 9pt;
+  text-align: center;
 }
 
 .wax-tooltip {
@@ -85,9 +109,10 @@ h1.title {
 	background-position-y:initial;
 	background-origin:initial;
 	background-clip:initial;
-	background-color:rgba(15, 111, 164,0.75);
+	background-color:#B81900;
 	color:#FFFFFF;
-	font-family:PolyItalic, sans-serif;
+	font-family:'Old Standard TT', sans-serif;
+	font-style:'italic';
 	-webkit-user-select:auto;
 	opacity:1;
 	-webkit-transition-property:opacity;
