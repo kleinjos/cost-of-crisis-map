@@ -1,7 +1,9 @@
+
 .layout {
   width:960px;
   margin:0 auto;
 }
+
 
 #map {
   width:100%;
@@ -21,11 +23,11 @@ h1.title {
   right: 0;
   background-color: rgba(15, 111, 164, .75);
   color: white;
-  font-family: 'Old Standard TT', sans-serif;
-  font-size: 26pt;
-  font-weight: normal;
+  font-family: 'NewsCycleRegular', sans-serif;
+  font-size: 32pt;
+  font-weight: regular;
   text-align: center;
-  z-index:999999;
+  z-index:99998;
   text-transform: uppercase;
 }
 
@@ -33,6 +35,7 @@ h1.title {
   font-size: 10pt;
   text-align: center;
   color: white;
+  font-weight:normal;
   text-transform: none;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -46,7 +49,7 @@ h1.title {
   right: 0;
   color: white;
   background-color: rgba(15, 111, 164, .75);
-  font-family: 'Old Standard TT', sans-serif;
+  font-family: 'UniversElseRegular', sans-serif;
   font-size: 16px;
   font-weight: normal;
   z-index:99999;
@@ -54,12 +57,12 @@ h1.title {
 
 .about p {
   margin-bottom:10px;
-  font-size:11pt;
+  font-size:13pt;
 }
 
 .about cite p {
-  font-family:'Old Standard TT', sans-serif;
-  font-size:10pt;
+  font-family:'UniversElseRegular', sans-serif;
+  font-size:12pt;
 }
 
 .sliderContainer {
@@ -92,12 +95,12 @@ h1.title {
   text-align: center;
 }
 
-.wax-tooltip {
+.wax-tooltip, .wax-tooltip-0 {
 	max-width:200px;
 	padding:10px;
 	position:absolute;
 	top:80px;
-	right:10px;
+	left:80%;
 	z-index:999999;
 	background-image:initial;
 	background-repeat-x:no-repeat;
@@ -111,7 +114,7 @@ h1.title {
 	background-clip:initial;
 	background-color:#B81900;
 	color:#FFFFFF;
-	font-family:'Old Standard TT', sans-serif;
+	font-family:'UniversElseRegular', sans-serif;
 	font-style:'italic';
 	-webkit-user-select:auto;
 	opacity:1;
@@ -139,4 +142,9 @@ h1.title {
 
 .wax-fade {
 	opacity:0;
+}
+
+.leaflet-control-zoom {
+	left:0px;
+	top:76px;
 }

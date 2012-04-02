@@ -7,7 +7,7 @@ var statelayer = "occupy.state-lines";
 
 wax.tilejson(url + baselayer + ',' + activelayer + ',' + statelayer + '.jsonp', function(tilejson) {
   map = new L.Map('map')
-    .setView(new L.LatLng(39, -78), 4);
+    .setView(new L.LatLng(39.317, -95.823), 4);
 
   tilejson.minzoom = 2;
   tilejson.maxzoom = 7;
