@@ -4,12 +4,15 @@
   margin:0 auto;
 }
 
+a  {
+	font-color:red;
+}
 
 #map {
   width:100%;
   height:100%;
   position:absolute;
-  background-color:rgba(95,93,93,0.25);
+  background-color:rgba(95,93,93,0.75);
   bottom:0;
   left:0;
   z-index:9990;
@@ -21,21 +24,22 @@ h1.title {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(15, 111, 164, .75);
+  background-color: rgba(15, 111, 164, .95);
   color: white;
-  font-family: 'NewsCycleRegular', sans-serif;
-  font-size: 32pt;
-  font-weight: regular;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 40pt;
+  font-weight: 400;
   text-align: center;
   z-index:99998;
   text-transform: uppercase;
 }
 
 #contact {
-  font-size: 10pt;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 11pt;
   text-align: center;
   color: white;
-  font-weight:normal;
+  font-weight:400;
   text-transform: none;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -43,13 +47,13 @@ h1.title {
 
 .about {
   width: 100%;
-  padding: 20px 0;
+  padding: 14px 0;
   position: absolute;
   bottom: 0;
   right: 0;
   color: white;
-  background-color: rgba(15, 111, 164, .75);
-  font-family: 'UniversElseRegular', sans-serif;
+  background-color: rgba(15, 111, 164, .95);
+  font-family: 'Ropa Sans', sans-serif;
   font-size: 16px;
   font-weight: normal;
   z-index:99999;
@@ -57,19 +61,21 @@ h1.title {
 
 .about p {
   margin-bottom:10px;
-  font-size:13pt;
+  font-size:11pt;
 }
 
 .about cite p {
-  font-family:'UniversElseRegular', sans-serif;
-  font-size:12pt;
+  font-family:'Ropa Sans', sans-serif;
+  font-style:normal;
+  font-size:11pt;
 }
 
 .sliderContainer {
-  width: 960px;
+  width:60%;	
+  max-width: 700px;
   margin: 20px auto;
-  margin-bottom: 7px;
-  margin-top: 7px;
+  margin-bottom: 20px;
+  margin-top: 3px;
   z-index:99999;
 }
 
@@ -99,7 +105,7 @@ h1.title {
 	max-width:200px;
 	padding:10px;
 	position:absolute;
-	top:80px;
+	top:100px;
 	left:80%;
 	z-index:999999;
 	background-image:initial;
@@ -114,7 +120,7 @@ h1.title {
 	background-clip:initial;
 	background-color:#B81900;
 	color:#FFFFFF;
-	font-family:'UniversElseRegular', sans-serif;
+	font-family:'Ropa Sans', sans-serif;
 	font-style:'italic';
 	-webkit-user-select:auto;
 	opacity:1;
@@ -144,7 +150,31 @@ h1.title {
 	opacity:0;
 }
 
+.leaflet-control {
+	position: relative;
+	z-index: 999999;
+}
+
+.leaflet-bottom {
+	position: absolute;
+	z-index:99999;
+}
+
+.leaflet-container .leaflet-control-attribution {
+	margin: 0;
+	padding: 0 5px;
+
+	font: 11px/1.5 Arial, sans-serif;
+	color: #333;
+
+	background-color: rgba(255, 255, 255, 0.7);
+
+	box-shadow: 0 0 7px #ccc;
+	
+}
+
 .leaflet-control-zoom {
+	position:absolute;
 	left:0px;
-	top:76px;
+	top:90px;
 }

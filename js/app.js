@@ -1,11 +1,10 @@
 var map, interactivity, layer;
 
 var url = 'http://api.tiles.mapbox.com/v3/';
-var baselayer = "occupy.wht-us-base"
 var activelayer = "occupy.4q11-delinq";
 var statelayer = "occupy.state-lines";
 
-wax.tilejson(url + baselayer + ',' + activelayer + ',' + statelayer + '.jsonp', function(tilejson) {
+wax.tilejson(url + activelayer + ',' + statelayer + '.jsonp', function(tilejson) {
   map = new L.Map('map')
     .setView(new L.LatLng(39.317, -95.823), 4);
 
@@ -58,7 +57,6 @@ $(document).ready(function () {
     var value = year.substring(2,4);
   	var activeLayer = "occupy.4q" + value + "-delinq";
     var layers = [
-      baselayer,
       activeLayer,
       statelayer
     ];
