@@ -27,7 +27,7 @@ h1.title {
   background-color: rgba(15, 111, 164, .95);
   color: white;
   font-family: 'Ropa Sans', sans-serif;
-  font-size: 40pt;
+  font-size: 48pt;
   font-weight: 400;
   text-align: center;
   z-index:99998;
@@ -36,7 +36,7 @@ h1.title {
 
 #contact {
   font-family: 'Ropa Sans', sans-serif;
-  font-size: 11pt;
+  font-size: 13pt;
   text-align: center;
   color: white;
   font-weight:400;
@@ -61,13 +61,13 @@ h1.title {
 
 .about p {
   margin-bottom:10px;
-  font-size:11pt;
+  font-size:13pt;
 }
 
 .about cite p {
   font-family:'Ropa Sans', sans-serif;
   font-style:normal;
-  font-size:11pt;
+  font-size:13pt;
 }
 
 .sliderContainer {
@@ -122,6 +122,7 @@ h1.title {
 	color:#FFFFFF;
 	font-family:'Ropa Sans', sans-serif;
 	font-style:'italic';
+	font-size:11pt;
 	-webkit-user-select:auto;
 	opacity:1;
 	-webkit-transition-property:opacity;
